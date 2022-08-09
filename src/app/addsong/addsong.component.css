@@ -1,0 +1,10 @@
+.dropdown{
+    width: 50%;
+}
+.container{
+    border: 2px solid black;
+}
+.dropdown-toggle{
+    background-color: rgb(168, 164, 164);
+    font-weight: bold;
+}

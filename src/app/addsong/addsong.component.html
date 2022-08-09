@@ -1,0 +1,53 @@
+<div class="container my-4">
+  <div>
+    <h2 class="text-success"><i>Add Songs</i></h2>
+  </div>
+<div class="my-3">
+  <form [formGroup]="addsongs" (ngSubmit)="onSubmit()">
+    <div class="form-group my-4">
+      <label for="">Song Name</label>
+      <input type="text"
+        class="form-control" name="" id="" aria-describedby="helpId" placeholder="" formControlName="songname" >
+    </div>
+    <div class="form-group my-4">
+      <label for="">Date Released</label>
+      <input type="text"
+        class="form-control" name="" id="" aria-describedby="helpId" placeholder="" formControlName="DOR" >
+    </div>
+    <div class="form-group my-4">
+        <form>
+            <div class="form-group">
+              <label for="exampleFormControlFile1">Artwork</label>
+              <input type="file" class="form-control-file" id="exampleFormControlFile1"  (change)="Onchange($event)">
+              
+            </div>
+          </form>
+    </div>
+    <div class="d-flex my-4">
+      <select class="ui dropdown" (change)="artists($event)">
+        <option value="">Artwork</option>
+        <option *ngFor="let item of artist" value="{{item.Aname}}">{{item.Aname}}</option>
+        <!-- <option value="0">Female</option> -->
+      </select>
+      <!-- <div class="dropdown">
+        <button class="btn  dropdown-toggle w-100" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Artists
+        </button>
+        <div class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton" >
+          <a class="dropdown-item"  *ngFor="let item of artist" >{{item.Aname}}</a>
+          <!-- <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a> 
+        </div>
+      </div> -->
+      <div class="mx-3">
+        <button routerLink="/addartist">Add Artist</button>
+      </div>
+    </div>
+    <div>
+        <button class="btn btn-outline-primary mx-3" routerLink="/home">Cancel</button>
+        
+        <button class="btn btn-outline-primary">Save</button>
+    </div>
+  </form>
+</div>
+</div>

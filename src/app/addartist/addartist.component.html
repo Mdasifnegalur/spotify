@@ -1,0 +1,24 @@
+<div class="container my-4">
+    <div class="my-3">
+        <h2 class="text-success text-center"><i>Add Artist</i></h2>
+    </div>
+    <form [formGroup]="Artists" (ngSubmit)="onSubmit()" >
+        <div class="form-group">
+          <label for="">Artist Name</label>
+          <input type="text"
+            class="form-control" name="" id="" formControlName="name" aria-describedby="helpId" placeholder="Enter Artist Name">
+        </div>
+        <div class="form-group">
+          <label for="">Artist DOB</label>
+          <input type="date"
+            class="form-control" name="" id="" formControlName="dob" aria-describedby="helpId" placeholder="Enter date of birth">
+        </div>
+        <div class="form-group">
+          <label for="">Bio</label>
+          <textarea class="form-control" name="" id="" formControlName="bio" rows="3"></textarea>
+        </div>
+        <div class="my-3">
+            <button class="btn btn-success btn-lg">Save</button>
+        </div>
+    </form>
+</div>
